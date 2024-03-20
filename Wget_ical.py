@@ -1,4 +1,4 @@
-import wget
+import wget  # type: ignore
 
 
 def FetchIcalFile(url):
