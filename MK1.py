@@ -12,7 +12,7 @@ from googleapiclient.errors import HttpError  # type: ignore
 SCOPES = ["https://www.googleapis.com/auth/calendar"]
 
 
-def Auth():
+def auth():
     """
     Auth with google calendar API and return credentials object
     """
@@ -20,7 +20,7 @@ def Auth():
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
-    if os.path.exists("token.json"):
+    if os.path.exists("./token.json"):
         creds = Credentials.from_authorized_user_file("token.json", SCOPES)
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
@@ -38,7 +38,7 @@ def Auth():
     return creds
 
 
-def LoadEvents(creds):
+def load_events(creds):
     try:
         service = build("calendar", "v3", credentials=creds)
 
@@ -72,9 +72,9 @@ def LoadEvents(creds):
 
 
 if __name__ == "__main__":
-    creds = Auth()
+    creds = auth()
     # ShowEvents(creds)
-    Wget_ical.FetchIcalFile('URL')
+    Wget_ical.fetch_ical_file('URL')
     # CreateEvent(creds)
     icsdir = os.listdir("./")
     for item in icsdir:
