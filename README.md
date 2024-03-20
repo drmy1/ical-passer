@@ -1,3 +1,3 @@
 # ical-passer
 
-ssss
+Project that will parse ical data from a local sonarr/radarr server to google via API
