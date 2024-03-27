@@ -4,5 +4,5 @@ Project that will parse ical data from a local sonarr/radarr server to google vi
 
 ## **Must have packages:**
 
-* pip install googleapis \n
+* pip install googleapis
 * pip install wget
