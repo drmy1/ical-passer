@@ -2,7 +2,7 @@
 
 Project that will parse ical data from a local sonarr/radarr server to google via API
 
-install:
+**install:**
 
-pip install googleapi
-pip install wget
+>pip install googleapi
+>pip install wget
